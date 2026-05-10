@@ -1,0 +1,81 @@
+{
+  "groups": {
+    "core_review": {
+      "label": "Core review",
+      "help": "These agents shape the main writing quality, argument flow, and scientific clarity of the paper."
+    },
+    "research_specific": {
+      "label": "Original research only",
+      "help": "These agents focus on methods and results. They matter most for papers with original experiments or analyses."
+    },
+    "evidence_references": {
+      "label": "Evidence, citations, and references",
+      "help": "These agents verify support for claims, check bibliographic metadata, and clean obvious reference issues."
+    }
+  },
+  "agents": {
+    "overall_review_agent": {
+      "label": "Overall Structure & Flow",
+      "help": "High-level review of structure, section balance, argument flow, and major logic issues.",
+      "speed": "fast",
+      "group": "core_review",
+      "default": true
+    },
+    "grammar_agent": {
+      "label": "Grammar & Style",
+      "help": "Improves grammar, wording, concision, and academic tone. Minor language issues are usually fixed directly as tracked changes.",
+      "speed": "medium",
+      "group": "core_review",
+      "default": true
+    },
+    "science_agent": {
+      "label": "Scientific Quality",
+      "help": "Checks scientific precision, overclaims, mechanistic phrasing, and figure-linked scientific interpretation.",
+      "speed": "medium",
+      "group": "core_review",
+      "default": true
+    },
+    "literature_review_agent": {
+      "label": "Literature Review Synthesis",
+      "help": "Looks at how well a review paper synthesizes sources, compares studies, and builds a critical narrative instead of only summarizing.",
+      "speed": "fast",
+      "group": "core_review",
+      "default": true
+    },
+    "methods_agent": {
+      "label": "Methods Rigor",
+      "help": "Reviews methods for reproducibility, missing controls, unclear settings, and reporting completeness.",
+      "speed": "medium",
+      "group": "research_specific",
+      "default": true
+    },
+    "results_agent": {
+      "label": "Results & Interpretation",
+      "help": "Reviews results and discussion for overstatement, weak comparisons, unsupported interpretation, and figure-result consistency.",
+      "speed": "medium",
+      "group": "research_specific",
+      "default": true
+    },
+    "fact_check_agent": {
+      "label": "Fact Check Against Sources",
+      "help": "Checks whether cited claims are supported by reference metadata, abstracts, and open-access full text when available.",
+      "speed": "slow",
+      "group": "evidence_references",
+      "default": true
+    },
+    "reference_verification": {
+      "label": "Reference Verification",
+      "help": "Runs deterministic checks for DOI matches, year mismatches, missing metadata, and reference integrity.",
+      "speed": "medium",
+      "group": "evidence_references",
+      "default": true
+    },
+    "citation_style_agent": {
+      "label": "Citation & Reference Cleanup",
+      "help": "Fixes safe citation formatting issues like spacing, OCR artifacts, capitalization, and obvious DOI formatting problems.",
+      "speed": "slow",
+      "group": "evidence_references",
+      "default": true
+    }
+  }
+}
