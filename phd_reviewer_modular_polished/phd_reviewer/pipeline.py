@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 r"""
 Production-oriented multi-agent DOCX reviewer for PhD papers.
-v2
+
 Modular edition: agent logic is loaded from phd_reviewer/agents/*.py so each agent can be edited independently.
 
 What this version adds
